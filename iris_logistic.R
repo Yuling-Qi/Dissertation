@@ -6,30 +6,6 @@ library(logistf) # For Firth's logistic regression
 library(glmnet)  # For regularization (LASSO)
 library(datasets)
 
-# data("Titanic", package = "datasets")
-# data <- as.data.frame(Titanic)
-# 
-# # Convert "Survived" to binary labels
-# data$Survived <- ifelse(data$Survived == "Yes", 1, 0)
-# 
-# # Convert "Class" to ordinal variable
-# data$Class <- as.numeric(factor(data$Class, levels = c("1st", "2nd", "3rd", "Crew")))
-# 
-# # Convert "Sex" to binary variable
-# data$Sex <- ifelse(data$Sex == "Female", 1, 0)
-# 
-# ## data modifications
-# data$Survived<-ifelse(data$Class=="1",1,data$Survived[data$Class=="2"])
-# 
-# 
-# # Perform standard logistic regression with selected variables
-# standard_model <- glm(Survived ~ Class + Sex + Age + Freq, 
-#                       data = data, family = "binomial")
-# 
-# # Print summary of standard logistic regression model
-# summary(standard_model)
-
-
 
 # Load the iris dataset
 data(iris)
