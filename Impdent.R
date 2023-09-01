@@ -42,7 +42,7 @@ cv_output <- cv.glmnet(x_train, y_train, alpha = 1, nfolds = 3, family = "poisso
 best_lam <- cv_output$lambda.min
 lasso.log <- glmnet(x_train, y_train, alpha = 1, lambda = best_lam, family = "poisson")
 
-# Obtain the coefficients of the logistic model with Lasso for the optimal lambda
+# Obtain the coefficients of the poisson regression model with Lasso for the optimal lambda
 lasso_coefficients <- coef(lasso.log, s = best_lam)
 coef(lasso.log)
 
